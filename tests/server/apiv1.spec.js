@@ -26,8 +26,11 @@
   sinon.spy(resMock, "status");
   sinon.spy(resMock, "send");
 
-
   describe('Get Weather', function() {
+
+    it('by city name', function(){
+      assert(true, 'Testing');
+    });
 
     it('without zip code', function() {
       reqMock = {
