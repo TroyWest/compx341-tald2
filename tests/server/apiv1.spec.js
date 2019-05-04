@@ -29,7 +29,7 @@
 
   describe('Get Weather', function() {
 
-    it('with without zip code', function() {
+    it('without zip code', function() {
       reqMock = {
         query: {
 
