@@ -26,7 +26,7 @@
                 });
     	});
 
-    	it('with without zip code', function(done) {
+    	it('without zip code', function(done) {
     		rqst(app).get('/api/v1/getWeather')
     		.end(function(err, res) {
                     assert.equal(res.status, 400);
