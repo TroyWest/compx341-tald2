@@ -168,7 +168,7 @@
     it('with valid city', function() {
       reqMock = {
         query: {
-          zip: "Hamilton"
+          city: "Hamilton"
         }
       };
 
