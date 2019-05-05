@@ -149,7 +149,7 @@
     it('with incomplete City', function() {
       reqMock = {
         query: {
-          zip: "Hamil"
+          city: "Hamil"
         }
       };
 
