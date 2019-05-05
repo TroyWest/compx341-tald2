@@ -41,12 +41,12 @@ router.get('/getWeather', exports.getWeather);
 
 
 exports.getWeather2 = function(req, res) {
-	var zip = req.query.zip;
-	if( (zip === null) || (typeof(zip) === 'undefined') ) {
+	var city = req.query.zip;
+	if( (city === null) || (typeof(city) === 'undefined') ) {
 		return res.status(400).send('zip missing');
 	}
 
-	var aurl = OPENWEATHERURL + '&zip=' + zip + ',us';
+	var aurl = OPENWEATHERURL + '&q=' + city + ',nz';
 
 	request({
 		method: 'GET',
