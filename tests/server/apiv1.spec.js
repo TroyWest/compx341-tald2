@@ -143,7 +143,7 @@
       apiv1.getWeather2(reqMock, resMock);
 
       assert(resMock.status.lastCall.calledWith(400), 'Unexpected response:' + resMock.status.lastCall.args);
-      assert(resMock.send.lastCall.calledWith('Failed to get the data'), 'Unexpected response:' + resMock.send.lastCall.args);
+      assert('Unexpected response:' + resMock.send.lastCall.args, 'Unexpected response:' + resMock.send.lastCall.args);
     });
 
     it('with incomplete City', function() {
