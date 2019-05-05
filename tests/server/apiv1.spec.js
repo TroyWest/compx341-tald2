@@ -143,8 +143,6 @@
       apiv1.getWeather2(reqMock, resMock);
 
       assert(resMock.status.lastCall.calledWith(400), 'Unexpected response:' + resMock.status.lastCall.args);
-      var response = 'Unexpected response:' + resMock.send.lastCall.args;
-      response = "Unexpected response:zip missing";
       assert(resMock.send.lastCall.calledWith('Failed to get the data'), response);
     });
 
