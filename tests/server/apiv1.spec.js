@@ -144,7 +144,7 @@
 
       assert(resMock.status.lastCall.calledWith(400), 'Unexpected response:' + resMock.status.lastCall.args);
       var response = 'Unexpected response:' + resMock.send.lastCall.args;
-      response = response.split('\n')[0];
+      response = "Unexpected response:zip missing";
       assert(resMock.send.lastCall.calledWith('Failed to get the data'), response);
     });
 
