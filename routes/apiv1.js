@@ -41,7 +41,7 @@ router.get('/getWeather', exports.getWeather);
 
 
 exports.getWeather2 = function(req, res) {
-	var city = req.query.zip;
+	var city = req.query.city;
 	if( (city === null) || (typeof(city) === 'undefined') ) {
 		return res.status(400).send('zip missing');
 	}
@@ -54,7 +54,7 @@ exports.getWeather2 = function(req, res) {
   		json: true
     }, function(err, resp, body) {
     	if(err) {
-    		res.status(400).send('Failed');// to get the data');
+    		res.status(400).send('Failed to get the data');
     		//console.error("Failed to send request to openweathermap.org", err);
     	} else {
     		if(body.cod === 200) {
