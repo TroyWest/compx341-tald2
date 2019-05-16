@@ -22,6 +22,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
         var data = "";
         if(which === 1) {
             data = $scope.zip1m;
+            
         } else if(which === 2) {
             data = $scope.zip2m;
         } else if(which === 3) {
