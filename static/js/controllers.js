@@ -17,11 +17,11 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
     $scope.zip1City = "";
     $scope.zip1Weather = "";
 
-    $scope.zip = function(which) {
+    $scope.city = function(which) {
 
         var data = "";
         if(which === 1) {
-            data = $scope.zip1m;
+            data = $scope.city1m;
 
         } else if(which === 2) {
             data = $scope.zip2m;
@@ -31,7 +31,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
             data = $scope.zip4m;
         } 
 
-        if(data.length > 5) {
+        if(data.length > 3) {
             $http({
                 method: "GET",
                 url: '/api/v1/getWeather2?city=' + data
