@@ -58,8 +58,8 @@ exports.getWeather2 = function(req, res) {
     		//console.error("Failed to send request to openweathermap.org", err);
     	} else {
     		if(body.cod === 200) {
-    			var weath = "Conditions are " + body.weather[0].main + " and temperature is " + body.main.temp + ' C';
-    			var response = {city: body.name, weather: weath};
+    			var weath = "Conditions are " + body.weather[0].main + " and temperature is " + body.main.temp + '&deg;C';
+    			var response = {city: body.name, weather: weath, latLng: body.coord};
     			return res.status(200).send(response);
     		} else {
                 return res.status(400).send({msg:'Failed'});
