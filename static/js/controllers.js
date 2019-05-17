@@ -15,7 +15,7 @@ var markers = {
         position: "",
         title: "test"
     })
-}
+};
 
 ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$timeout', '$sce',
     function($scope, $http, $routeParams, $timeout, $sce) {
