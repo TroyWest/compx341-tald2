@@ -10,12 +10,6 @@ ConsoleModule.config(['$routeProvider', '$locationProvider','$sceDelegateProvide
     });
 }]);
 
-var markers = {
-    m1 :new google.maps.Marker({
-        position: "",
-        title: "test"
-    })
-};
 
 ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$timeout', '$sce',
     function($scope, $http, $routeParams, $timeout, $sce) {
@@ -46,8 +40,8 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
                 url: '/api/v1/getWeather2?city=' + data
             }).then( function(response) {
                 if(which === 1) {
-                    $scope.zip1Weather = response.data.weather;
-                    markers.m1.position = response.data.latLng;
+                    $scope.zip1Weather = response.data.weather;   
+                    test();                 
                 } else if(which === 2) {
                     $scope.zip2Weather = response.data.weather;
                 } else if(which === 3) {
