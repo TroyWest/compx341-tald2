@@ -26,8 +26,18 @@ async defer></script>
 			zoom: 5
 		});
     }
-    function test(){
-        alert("");
+
+    var markers = {
+        m1: new google.maps.Marker({
+            position: {lat: 0, lng: 0},
+            map: map,
+            title: ""
+        })
+    }
+
+    function updateMarker(latLng){
+        markers.m1.position = latLng;
+        
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4WBxITpV5XpuAgUVieSM2PcxFi9sYHSs&callback=initMap"

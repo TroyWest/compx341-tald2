@@ -41,7 +41,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
             }).then( function(response) {
                 if(which === 1) {
                     $scope.zip1Weather = response.data.weather;   
-                    test();                 
+                    updateMarker(response.data.latLng);                 
                 } else if(which === 2) {
                     $scope.zip2Weather = response.data.weather;
                 } else if(which === 3) {
