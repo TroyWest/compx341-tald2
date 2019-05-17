@@ -10,6 +10,13 @@ ConsoleModule.config(['$routeProvider', '$locationProvider','$sceDelegateProvide
     });
 }]);
 
+var markers = {
+    m1 :new google.maps.Marker({
+        position: "",
+        title: "test"
+    })
+}
+
 ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$timeout', '$sce',
     function($scope, $http, $routeParams, $timeout, $sce) {
 
@@ -20,8 +27,11 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
     $scope.city = function(which) {
 
         var data = "";
+
         if(which === 1) {
             data = $scope.city1m;
+            //markers.m1.position = 
+
         } else if(which === 2) {
             data = $scope.city2m;
         } else if(which === 3) {
